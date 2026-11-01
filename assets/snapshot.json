@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T02:11:12-08:00",
+  "generated_at": "2026-11-01T02:51:37-08:00",
   "mode": "offline",
-  "cycle": 5,
+  "cycle": 6,
   "decision": "KEEP",
-  "change": "+274 pro plays (vod_batch 20 + vod_opp); ruling B weighted deck-meta KPI re-baselined 0.813",
+  "change": "+16 pro plays (vod_chain 02:18, spell conf 0.2)",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -90,8 +90,8 @@
       "key": "pro_plays",
       "label": "Pro plays learned",
       "baseline": "221",
-      "current": "1187",
-      "delta": "+966",
+      "current": "1188",
+      "delta": "+967",
       "trend": "up-good",
       "source": "VOD",
       "note": null,
@@ -112,7 +112,7 @@
       "key": "decision_match",
       "label": "Decision-match vs pros",
       "baseline": "\u2014",
-      "current": "58.9%",
+      "current": "58.4%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -243,6 +243,15 @@
       "counter": 0.664,
       "placement": 0.471,
       "decision": 0.589,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 6,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.471,
+      "decision": 0.584,
       "elixir": 2.04,
       "decision_tag": "KEEP"
     }
