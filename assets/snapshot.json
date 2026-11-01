@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T01:37:47-08:00",
+  "generated_at": "2026-11-01T02:11:12-08:00",
   "mode": "offline",
-  "cycle": 4,
-  "decision": "REVERT",
-  "change": "unit->card name aliases (plural/evolution) in tactic miner",
+  "cycle": 5,
+  "decision": "KEEP",
+  "change": "+274 pro plays (vod_batch 20 + vod_opp); ruling B weighted deck-meta KPI re-baselined 0.813",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -46,8 +46,8 @@
       "key": "threat_coverage",
       "label": "Meta/ladder threat coverage",
       "baseline": "20.0%",
-      "current": "45.0%",
-      "delta": "+25.0 pp",
+      "current": "55.0%",
+      "delta": "+35.0 pp",
       "trend": "up-good",
       "source": "LOG+VOD",
       "note": null,
@@ -90,8 +90,8 @@
       "key": "pro_plays",
       "label": "Pro plays learned",
       "baseline": "221",
-      "current": "905",
-      "delta": "+684",
+      "current": "1187",
+      "delta": "+966",
       "trend": "up-good",
       "source": "VOD",
       "note": null,
@@ -112,7 +112,7 @@
       "key": "decision_match",
       "label": "Decision-match vs pros",
       "baseline": "\u2014",
-      "current": "57.8%",
+      "current": "58.9%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -134,7 +134,7 @@
       "key": "placement_heatmap_sim",
       "label": "Placement accuracy (SIM)",
       "baseline": "\u2014",
-      "current": "45.0%",
+      "current": "47.1%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM+VOD",
@@ -156,7 +156,7 @@
   "axes": [
     {
       "label": "Placement accuracy",
-      "value": "45.0%",
+      "value": "47.1%",
       "source": "SIM+VOD",
       "detail": "SIM heatmap / VOD overlays"
     },
@@ -236,6 +236,15 @@
       "decision": 0.578,
       "elixir": 2.04,
       "decision_tag": "REVERT"
+    },
+    {
+      "cycle": 5,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.471,
+      "decision": 0.589,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
     }
   ],
   "evidence": [
