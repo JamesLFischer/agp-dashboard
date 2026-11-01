@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T15:13:09-08:00",
+  "generated_at": "2026-11-01T15:15:33-08:00",
   "mode": "offline",
-  "cycle": 16,
-  "decision": "KEEP",
-  "change": "targeted VOD mining (AGP_VOD_Q barbarian-barrel/arrows): barbarian-barrel->fireball n=7",
+  "cycle": 17,
+  "decision": "REVERT",
+  "change": "wire measured held-out bc within1 (0.496, sha-locked to bc.pt) into KPI",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -123,7 +123,7 @@
       "key": "bc_within1",
       "label": "Imitation placement accuracy",
       "baseline": "0.23\u20130.31",
-      "current": "\u2014",
+      "current": "49.6%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -344,6 +344,15 @@
       "decision": 0.572,
       "elixir": 2.04,
       "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 17,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.569,
+      "decision": 0.572,
+      "elixir": 2.04,
+      "decision_tag": "REVERT"
     }
   ],
   "evidence": [
