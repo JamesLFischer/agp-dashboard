@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T10:56:20-08:00",
+  "generated_at": "2026-11-01T15:13:09-08:00",
   "mode": "offline",
-  "cycle": 13,
+  "cycle": 16,
   "decision": "KEEP",
-  "change": "scheduled learn cycle",
+  "change": "targeted VOD mining (AGP_VOD_Q barbarian-barrel/arrows): barbarian-barrel->fireball n=7",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -90,8 +90,8 @@
       "key": "pro_plays",
       "label": "Pro plays learned",
       "baseline": "221",
-      "current": "2731",
-      "delta": "+2510",
+      "current": "3667",
+      "delta": "+3446",
       "trend": "up-good",
       "source": "VOD",
       "note": null,
@@ -112,7 +112,7 @@
       "key": "decision_match",
       "label": "Decision-match vs pros",
       "baseline": "\u2014",
-      "current": "58.3%",
+      "current": "57.2%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -134,7 +134,7 @@
       "key": "placement_heatmap_sim",
       "label": "Placement accuracy (SIM)",
       "baseline": "\u2014",
-      "current": "55.7%",
+      "current": "56.9%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM+VOD",
@@ -145,7 +145,7 @@
       "key": "deck_meta_alignment",
       "label": "Deck building vs meta",
       "baseline": "\u2014",
-      "current": "55.0%",
+      "current": "60.0%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "LOG+WEB",
@@ -156,13 +156,13 @@
   "axes": [
     {
       "label": "Placement accuracy",
-      "value": "55.7%",
+      "value": "56.9%",
       "source": "SIM+VOD",
       "detail": "SIM heatmap / VOD overlays"
     },
     {
       "label": "Deck building vs meta",
-      "value": "55.0%",
+      "value": "60.0%",
       "source": "LOG+WEB",
       "detail": "Alignment to seen-opponent / meta plans"
     },
@@ -315,6 +315,33 @@
       "counter": 0.664,
       "placement": 0.557,
       "decision": 0.583,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 14,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.563,
+      "decision": 0.585,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 15,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.572,
+      "decision": 0.572,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 16,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.569,
+      "decision": 0.572,
       "elixir": 2.04,
       "decision_tag": "KEEP"
     }
