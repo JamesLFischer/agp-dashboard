@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T09:26:53-08:00",
+  "generated_at": "2026-11-01T10:56:20-08:00",
   "mode": "offline",
-  "cycle": 12,
+  "cycle": 13,
   "decision": "KEEP",
-  "change": "ladder top-20 refreshed: prior + elixirdeck Nov-1 blend",
+  "change": "scheduled learn cycle",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -90,8 +90,8 @@
       "key": "pro_plays",
       "label": "Pro plays learned",
       "baseline": "221",
-      "current": "2325",
-      "delta": "+2104",
+      "current": "2731",
+      "delta": "+2510",
       "trend": "up-good",
       "source": "VOD",
       "note": null,
@@ -112,7 +112,7 @@
       "key": "decision_match",
       "label": "Decision-match vs pros",
       "baseline": "\u2014",
-      "current": "58.7%",
+      "current": "58.3%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -134,7 +134,7 @@
       "key": "placement_heatmap_sim",
       "label": "Placement accuracy (SIM)",
       "baseline": "\u2014",
-      "current": "55.0%",
+      "current": "55.7%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM+VOD",
@@ -145,7 +145,7 @@
       "key": "deck_meta_alignment",
       "label": "Deck building vs meta",
       "baseline": "\u2014",
-      "current": "45.0%",
+      "current": "55.0%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "LOG+WEB",
@@ -156,13 +156,13 @@
   "axes": [
     {
       "label": "Placement accuracy",
-      "value": "55.0%",
+      "value": "55.7%",
       "source": "SIM+VOD",
       "detail": "SIM heatmap / VOD overlays"
     },
     {
       "label": "Deck building vs meta",
-      "value": "45.0%",
+      "value": "55.0%",
       "source": "LOG+WEB",
       "detail": "Alignment to seen-opponent / meta plans"
     },
@@ -306,6 +306,15 @@
       "counter": 0.664,
       "placement": 0.55,
       "decision": 0.587,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 13,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.557,
+      "decision": 0.583,
       "elixir": 2.04,
       "decision_tag": "KEEP"
     }
