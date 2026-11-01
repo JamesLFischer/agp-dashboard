@@ -1,0 +1,323 @@
+{
+  "product": "AI Game Player",
+  "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
+  "generated_at": "2026-11-01T01:37:47-08:00",
+  "mode": "offline",
+  "cycle": 4,
+  "decision": "REVERT",
+  "change": "unit->card name aliases (plural/evolution) in tactic miner",
+  "live_status": "paused",
+  "baseline_cycle": 0,
+  "rows": [
+    {
+      "key": "win_rate",
+      "label": "Win rate",
+      "baseline": "42.6%",
+      "current": "paused",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "LIVE",
+      "note": "Never mix LIVE with SIM/LOG practice WR",
+      "status": "paused"
+    },
+    {
+      "key": "spell_hit",
+      "label": "Spell hit rate",
+      "baseline": "48.0%",
+      "current": "60.2%",
+      "delta": "+12.2 pp",
+      "trend": "up-good",
+      "source": "SIM",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "elixir_waste_s",
+      "label": "Elixir waste (s)",
+      "baseline": "8.9",
+      "current": "2.04",
+      "delta": "-6.86",
+      "trend": "down-good",
+      "source": "SIM",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "threat_coverage",
+      "label": "Meta/ladder threat coverage",
+      "baseline": "20.0%",
+      "current": "45.0%",
+      "delta": "+25.0 pp",
+      "trend": "up-good",
+      "source": "LOG+VOD",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "counter_success_strict",
+      "label": "Counter success (strict)",
+      "baseline": "\u2014",
+      "current": "66.4%",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "LOG",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "deck_upgrades_day",
+      "label": "Deck upgrades / day",
+      "baseline": "0",
+      "current": "\u2014",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "LOG",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "claim_rate",
+      "label": "Reward claim rate",
+      "baseline": "\u2014",
+      "current": "\u2014",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "\u2014",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "pro_plays",
+      "label": "Pro plays learned",
+      "baseline": "221",
+      "current": "905",
+      "delta": "+684",
+      "trend": "up-good",
+      "source": "VOD",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "own_matches",
+      "label": "Own-match sample",
+      "baseline": "281",
+      "current": "281",
+      "delta": "0",
+      "trend": "flat",
+      "source": "LOG",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "decision_match",
+      "label": "Decision-match vs pros",
+      "baseline": "\u2014",
+      "current": "57.8%",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "SIM",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "bc_within1",
+      "label": "Imitation placement accuracy",
+      "baseline": "0.23\u20130.31",
+      "current": "\u2014",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "SIM",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "placement_heatmap_sim",
+      "label": "Placement accuracy (SIM)",
+      "baseline": "\u2014",
+      "current": "45.0%",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "SIM+VOD",
+      "note": null,
+      "status": "ok"
+    },
+    {
+      "key": "deck_meta_alignment",
+      "label": "Deck building vs meta",
+      "baseline": "\u2014",
+      "current": "20.0%",
+      "delta": "\u2014",
+      "trend": "flat",
+      "source": "LOG+WEB",
+      "note": null,
+      "status": "ok"
+    }
+  ],
+  "axes": [
+    {
+      "label": "Placement accuracy",
+      "value": "45.0%",
+      "source": "SIM+VOD",
+      "detail": "SIM heatmap / VOD overlays"
+    },
+    {
+      "label": "Deck building vs meta",
+      "value": "20.0%",
+      "source": "LOG+WEB",
+      "detail": "Alignment to seen-opponent / meta plans"
+    },
+    {
+      "label": "Counters",
+      "value": "66.4%",
+      "source": "LOG",
+      "detail": "Strict counter success"
+    },
+    {
+      "label": "Spell aim",
+      "value": "60.2%",
+      "source": "SIM",
+      "detail": "Spell impact audit / SIM casts"
+    },
+    {
+      "label": "Movement / elixir",
+      "value": "2.04",
+      "source": "SIM",
+      "detail": "Seconds elixir wasted (lower better)"
+    },
+    {
+      "label": "Upgrades / rewards",
+      "value": "paused",
+      "source": "LIVE",
+      "detail": "LIVE paused until James greenlights play"
+    }
+  ],
+  "history": [
+    {
+      "cycle": 0,
+      "spell_hit": 0.48,
+      "counter": null,
+      "placement": null,
+      "decision": null,
+      "elixir": 8.9,
+      "decision_tag": "BASELINE"
+    },
+    {
+      "cycle": 1,
+      "spell_hit": 0.495,
+      "counter": 0.664,
+      "placement": 0.45,
+      "decision": 0.578,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 2,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.45,
+      "decision": 0.578,
+      "elixir": 2.04,
+      "decision_tag": "REVERT"
+    },
+    {
+      "cycle": 3,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.45,
+      "decision": 0.578,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 4,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.45,
+      "decision": 0.578,
+      "elixir": 2.04,
+      "decision_tag": "REVERT"
+    }
+  ],
+  "evidence": [
+    {
+      "src": "evidence/0_dashboard.png",
+      "kind": "image",
+      "name": "dashboard.png"
+    },
+    {
+      "src": "evidence/1_cmp.jpg",
+      "kind": "image",
+      "name": "cmp.jpg"
+    },
+    {
+      "src": "evidence/2_emu.jpg",
+      "kind": "image",
+      "name": "emu.jpg"
+    },
+    {
+      "src": "evidence/3_emu2.jpg",
+      "kind": "image",
+      "name": "emu2.jpg"
+    },
+    {
+      "src": "evidence/4_ci.png",
+      "kind": "image",
+      "name": "ci.png"
+    },
+    {
+      "src": "evidence/5_c3s.png",
+      "kind": "image",
+      "name": "c3s.png"
+    },
+    {
+      "src": "evidence/6_cal_home.png",
+      "kind": "image",
+      "name": "cal_home.png"
+    },
+    {
+      "src": "evidence/7_cal_deck_equipped.png",
+      "kind": "image",
+      "name": "cal_deck_equipped.png"
+    },
+    {
+      "src": "evidence/8_cal_coll_s0.png",
+      "kind": "image",
+      "name": "cal_coll_s0.png"
+    },
+    {
+      "src": "evidence/9_cal_cr_a.png",
+      "kind": "image",
+      "name": "cal_cr_a.png"
+    },
+    {
+      "src": "evidence/10_contact.png",
+      "kind": "image",
+      "name": "contact.png"
+    },
+    {
+      "src": "evidence/11_sheet.png",
+      "kind": "image",
+      "name": "sheet.png"
+    },
+    {
+      "src": "evidence/12_home.png",
+      "kind": "image",
+      "name": "home.png"
+    },
+    {
+      "src": "evidence/13_sheet_nav.png",
+      "kind": "image",
+      "name": "sheet_nav.png"
+    },
+    {
+      "src": "evidence/14_sheet.png",
+      "kind": "image",
+      "name": "sheet.png"
+    },
+    {
+      "src": "evidence/15_sr_0826_1844.mp4",
+      "kind": "video",
+      "name": "sr_0826_1844.mp4"
+    }
+  ]
+}

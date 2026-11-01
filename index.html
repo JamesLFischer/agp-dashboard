@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Game Player — Progress</title>
+<meta name="description" content="Client-facing progress dashboard for AI Game Player: KPIs, trends, and AI gameplay evidence." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #07090f;
+    --bg-elev: #0e121b;
+    --line: rgba(255,255,255,.08);
+    --text: #eef2ff;
+    --muted: #93a0b8;
+    --accent: #6ee7ff;
+    --good: #34d399;
+    --bad: #fb7185;
+    --warn: #fbbf24;
+    --radius: 18px;
+    --shadow: 0 20px 60px rgba(0,0,0,.45);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Outfit, system-ui, sans-serif; }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(110,231,255,.12), transparent 55%),
+      radial-gradient(900px 500px at 90% 0%, rgba(167,139,250,.12), transparent 50%),
+      linear-gradient(180deg, #07090f 0%, #0a0d14 100%);
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 80px; }
+  header.hero {
+    display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: stretch; margin-bottom: 36px;
+  }
+  @media (max-width: 900px) { header.hero { grid-template-columns: 1fr; } }
+  .brand {
+    background: linear-gradient(160deg, rgba(18,24,38,.92), rgba(14,18,27,.88));
+    border: 1px solid var(--line); border-radius: 28px; padding: 32px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+  }
+  .eyebrow {
+    display: inline-flex; gap: 8px; align-items: center; font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 14px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--warn); box-shadow: 0 0 12px var(--warn); }
+  h1 { font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.05; margin: 0 0 12px; letter-spacing: -.03em; }
+  .lede { color: var(--muted); font-size: 1.05rem; max-width: 38ch; line-height: 1.55; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .chip {
+    border: 1px solid var(--line); background: rgba(255,255,255,.03);
+    padding: 8px 12px; border-radius: 999px; font-size: 13px; color: var(--muted);
+  }
+  .chip strong { color: var(--text); font-weight: 600; }
+  .hero-media {
+    border-radius: 28px; overflow: hidden; border: 1px solid var(--line);
+    background: #000; min-height: 280px; position: relative; box-shadow: var(--shadow);
+  }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .95; }
+  .hero-media .cap {
+    position: absolute; left: 16px; bottom: 16px; background: rgba(7,9,15,.72); backdrop-filter: blur(10px);
+    border: 1px solid var(--line); padding: 8px 12px; border-radius: 12px; font-size: 12px; color: var(--muted);
+  }
+  section { margin-top: 34px; }
+  .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 16px; }
+  .section-head h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.02em; }
+  .section-head p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .panel {
+    background: rgba(18,24,38,.88); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th {
+    text-align: left; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; padding: 14px 16px; background: rgba(255,255,255,.02); border-bottom: 1px solid var(--line);
+  }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  .kpi-name { font-weight: 500; }
+  .note { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .num { font-family: "JetBrains Mono", monospace; font-size: 13px; white-space: nowrap; }
+  .cur .val { font-weight: 600; color: var(--text); }
+  .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .pill.paused { background: rgba(100,116,139,.2); color: #cbd5e1; }
+  .delta.up-good, .trend.up-good, .delta.down-good, .trend.down-good { color: var(--good); }
+  .delta.up-bad, .trend.up-bad, .delta.down-bad, .trend.down-bad { color: var(--bad); }
+  .delta.flat, .trend.flat { color: var(--muted); }
+  .src {
+    font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 4px 8px; border-radius: 8px;
+    border: 1px solid var(--line); color: var(--accent); background: rgba(110,231,255,.06);
+  }
+  .axes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 900px) { .axes { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .axes { grid-template-columns: 1fr; } }
+  .axis-card { background: rgba(18,24,38,.88); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+  .axis-label { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  .axis-value { font-size: 1.6rem; font-weight: 650; letter-spacing: -.03em; }
+  .axis-meta { margin-top: 8px; color: var(--muted); font-size: 12px; }
+  .charts { display: grid; grid-template-columns: 1.4fr .8fr; gap: 14px; }
+  @media (max-width: 900px) { .charts { grid-template-columns: 1fr; } }
+  .chart-card { padding: 18px 18px 8px; }
+  .chart-card h3 { margin: 0 0 6px; font-size: 1rem; }
+  .chart-card .sub { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+  canvas { width: 100%; height: 180px; display: block; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .media-card { margin: 0; background: rgba(18,24,38,.88); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  .media-card img, .media-card video { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; background: #000; }
+  .media-card figcaption {
+    padding: 10px 12px; font-size: 12px; color: var(--muted); font-family: "JetBrains Mono", monospace;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  footer {
+    margin-top: 48px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    border-top: 1px solid var(--line); padding-top: 18px;
+  }
+  code { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <div class="eyebrow"><span class="dot"></span> Live progress · LIVE play paused</div>
+        <h1>AI Game Player</h1>
+        <p class="lede">Progress you can watch — the AI's climb, with receipts.</p>
+        <div class="meta-row">
+          <div class="chip">Cycle <strong>#4</strong></div>
+          <div class="chip">Decision <strong>REVERT</strong></div>
+          <div class="chip">Mode <strong>offline</strong></div>
+          <div class="chip">Updated <strong>2026-11-01T01:37:47-08:00</strong></div>
+        </div>
+        <p class="lede" style="margin-top:18px;font-size:.92rem">Showing SIM / VOD / LOG metrics. Live ladder KPIs stay blank until play is greenlit — practice win rate is never mixed into live win rate.</p>
+      </div>
+      <div class="hero-media">
+        <img src="assets/dashboard.png" alt="AI Game Player dashboard snapshot" />
+        <div class="cap">AI cycle snapshot · evidence-backed</div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Performance KPIs</h2>
+          <p>Baseline → current · Δ · trend · source labeled (LIVE / SIM / VOD / LOG)</p>
+        </div>
+      </div>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th><th>Baseline</th><th>Current</th><th>Δ</th><th>Trend</th><th>Source</th>
+            </tr>
+          </thead>
+          <tbody><tr><td class="kpi-name">Win rate<div class="note">Never mix LIVE with SIM/LOG practice WR</div></td><td class="num">42.6%</td><td class="num cur"><span class="pill paused">paused</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">LIVE</span></td></tr><tr><td class="kpi-name">Spell hit rate</td><td class="num">48.0%</td><td class="num cur"><span class="val">60.2%</span></td><td class="num delta up-good">+12.2 pp</td><td><span class="trend up-good">up</span></td><td><span class="src">SIM</span></td></tr><tr><td class="kpi-name">Elixir waste (s)</td><td class="num">8.9</td><td class="num cur"><span class="val">2.04</span></td><td class="num delta down-good">-6.86</td><td><span class="trend down-good">down</span></td><td><span class="src">SIM</span></td></tr><tr><td class="kpi-name">Meta/ladder threat coverage</td><td class="num">20.0%</td><td class="num cur"><span class="val">45.0%</span></td><td class="num delta up-good">+25.0 pp</td><td><span class="trend up-good">up</span></td><td><span class="src">LOG+VOD</span></td></tr><tr><td class="kpi-name">Counter success (strict)</td><td class="num">—</td><td class="num cur"><span class="val">66.4%</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">LOG</span></td></tr><tr><td class="kpi-name">Deck upgrades / day</td><td class="num">0</td><td class="num cur"><span class="val">—</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">LOG</span></td></tr><tr><td class="kpi-name">Reward claim rate</td><td class="num">—</td><td class="num cur"><span class="val">—</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">—</span></td></tr><tr><td class="kpi-name">Pro plays learned</td><td class="num">221</td><td class="num cur"><span class="val">905</span></td><td class="num delta up-good">+684</td><td><span class="trend up-good">up</span></td><td><span class="src">VOD</span></td></tr><tr><td class="kpi-name">Own-match sample</td><td class="num">281</td><td class="num cur"><span class="val">281</span></td><td class="num delta flat">0</td><td><span class="trend flat">flat</span></td><td><span class="src">LOG</span></td></tr><tr><td class="kpi-name">Decision-match vs pros</td><td class="num">—</td><td class="num cur"><span class="val">57.8%</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">SIM</span></td></tr><tr><td class="kpi-name">Imitation placement accuracy</td><td class="num">0.23–0.31</td><td class="num cur"><span class="val">—</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">SIM</span></td></tr><tr><td class="kpi-name">Placement accuracy (SIM)</td><td class="num">—</td><td class="num cur"><span class="val">45.0%</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">SIM+VOD</span></td></tr><tr><td class="kpi-name">Deck building vs meta</td><td class="num">—</td><td class="num cur"><span class="val">20.0%</span></td><td class="num delta flat">—</td><td><span class="trend flat">flat</span></td><td><span class="src">LOG+WEB</span></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Capability axes</h2>
+          <p>Placement, deck quality, counters, spell aim, elixir, upgrades</p>
+        </div>
+      </div>
+      <div class="axes"><div class="axis-card"><div class="axis-label">Placement accuracy</div><div class="axis-value">45.0%</div><div class="axis-meta"><span class="src">SIM+VOD</span> · SIM heatmap / VOD overlays</div></div><div class="axis-card"><div class="axis-label">Deck building vs meta</div><div class="axis-value">20.0%</div><div class="axis-meta"><span class="src">LOG+WEB</span> · Alignment to seen-opponent / meta plans</div></div><div class="axis-card"><div class="axis-label">Counters</div><div class="axis-value">66.4%</div><div class="axis-meta"><span class="src">LOG</span> · Strict counter success</div></div><div class="axis-card"><div class="axis-label">Spell aim</div><div class="axis-value">60.2%</div><div class="axis-meta"><span class="src">SIM</span> · Spell impact audit / SIM casts</div></div><div class="axis-card"><div class="axis-label">Movement / elixir</div><div class="axis-value">2.04</div><div class="axis-meta"><span class="src">SIM</span> · Seconds elixir wasted (lower better)</div></div><div class="axis-card"><div class="axis-label">Upgrades / rewards</div><div class="axis-value">paused</div><div class="axis-meta"><span class="src">LIVE</span> · LIVE paused until James greenlights play</div></div></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>Trend lines</h2>
+          <p>Offline learn cycles · higher is better except elixir waste</p>
+        </div>
+      </div>
+      <div class="charts">
+        <div class="panel chart-card">
+          <h3>Spell hit · counters · placement</h3>
+          <div class="sub">From METRICS_HISTORY.jsonl</div>
+          <canvas id="chartMain"></canvas>
+        </div>
+        <div class="panel chart-card">
+          <h3>Decision match · elixir waste</h3>
+          <div class="sub">SIM / LOG mix · see source column</div>
+          <canvas id="chartSide"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>AI evidence</h2>
+          <p>Gameplay stills, contact sheets, and recordings from the AI — updated each cycle</p>
+        </div>
+      </div>
+      <div class="gallery"><figure class="media-card"><a href="evidence/0_dashboard.png" target="_blank" rel="noopener"><img src="evidence/0_dashboard.png" alt="dashboard.png" loading="lazy" /></a><figcaption>dashboard.png</figcaption></figure><figure class="media-card"><a href="evidence/1_cmp.jpg" target="_blank" rel="noopener"><img src="evidence/1_cmp.jpg" alt="cmp.jpg" loading="lazy" /></a><figcaption>cmp.jpg</figcaption></figure><figure class="media-card"><a href="evidence/2_emu.jpg" target="_blank" rel="noopener"><img src="evidence/2_emu.jpg" alt="emu.jpg" loading="lazy" /></a><figcaption>emu.jpg</figcaption></figure><figure class="media-card"><a href="evidence/3_emu2.jpg" target="_blank" rel="noopener"><img src="evidence/3_emu2.jpg" alt="emu2.jpg" loading="lazy" /></a><figcaption>emu2.jpg</figcaption></figure><figure class="media-card"><a href="evidence/4_ci.png" target="_blank" rel="noopener"><img src="evidence/4_ci.png" alt="ci.png" loading="lazy" /></a><figcaption>ci.png</figcaption></figure><figure class="media-card"><a href="evidence/5_c3s.png" target="_blank" rel="noopener"><img src="evidence/5_c3s.png" alt="c3s.png" loading="lazy" /></a><figcaption>c3s.png</figcaption></figure><figure class="media-card"><a href="evidence/6_cal_home.png" target="_blank" rel="noopener"><img src="evidence/6_cal_home.png" alt="cal_home.png" loading="lazy" /></a><figcaption>cal_home.png</figcaption></figure><figure class="media-card"><a href="evidence/7_cal_deck_equipped.png" target="_blank" rel="noopener"><img src="evidence/7_cal_deck_equipped.png" alt="cal_deck_equipped.png" loading="lazy" /></a><figcaption>cal_deck_equipped.png</figcaption></figure><figure class="media-card"><a href="evidence/8_cal_coll_s0.png" target="_blank" rel="noopener"><img src="evidence/8_cal_coll_s0.png" alt="cal_coll_s0.png" loading="lazy" /></a><figcaption>cal_coll_s0.png</figcaption></figure><figure class="media-card"><a href="evidence/9_cal_cr_a.png" target="_blank" rel="noopener"><img src="evidence/9_cal_cr_a.png" alt="cal_cr_a.png" loading="lazy" /></a><figcaption>cal_cr_a.png</figcaption></figure><figure class="media-card"><a href="evidence/10_contact.png" target="_blank" rel="noopener"><img src="evidence/10_contact.png" alt="contact.png" loading="lazy" /></a><figcaption>contact.png</figcaption></figure><figure class="media-card"><a href="evidence/11_sheet.png" target="_blank" rel="noopener"><img src="evidence/11_sheet.png" alt="sheet.png" loading="lazy" /></a><figcaption>sheet.png</figcaption></figure><figure class="media-card"><a href="evidence/12_home.png" target="_blank" rel="noopener"><img src="evidence/12_home.png" alt="home.png" loading="lazy" /></a><figcaption>home.png</figcaption></figure><figure class="media-card"><a href="evidence/13_sheet_nav.png" target="_blank" rel="noopener"><img src="evidence/13_sheet_nav.png" alt="sheet_nav.png" loading="lazy" /></a><figcaption>sheet_nav.png</figcaption></figure><figure class="media-card"><a href="evidence/14_sheet.png" target="_blank" rel="noopener"><img src="evidence/14_sheet.png" alt="sheet.png" loading="lazy" /></a><figcaption>sheet.png</figcaption></figure><figure class="media-card video"><video src="evidence/15_sr_0826_1844.mp4" controls playsinline muted loop preload="metadata" poster="assets/dashboard.png"></video><figcaption>sr_0826_1844.mp4</figcaption></figure></div>
+    </section>
+
+    <footer>
+      <div>AI Game Player · consumer progress surface · generated for James Fischer</div>
+      <div>Update: <code>python3 /workspace/agp/dashboard/build_dashboard.py</code></div>
+    </footer>
+  </div>
+<script>
+const HIST = [{"cycle": 0, "spell_hit": 0.48, "counter": null, "placement": null, "decision": null, "elixir": 8.9, "decision_tag": "BASELINE"}, {"cycle": 1, "spell_hit": 0.495, "counter": 0.664, "placement": 0.45, "decision": 0.578, "elixir": 2.04, "decision_tag": "KEEP"}, {"cycle": 2, "spell_hit": 0.602, "counter": 0.664, "placement": 0.45, "decision": 0.578, "elixir": 2.04, "decision_tag": "REVERT"}, {"cycle": 3, "spell_hit": 0.602, "counter": 0.664, "placement": 0.45, "decision": 0.578, "elixir": 2.04, "decision_tag": "KEEP"}, {"cycle": 4, "spell_hit": 0.602, "counter": 0.664, "placement": 0.45, "decision": 0.578, "elixir": 2.04, "decision_tag": "REVERT"}];
+function drawLine(canvas, series, colors) {
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const w = rect.width, h = rect.height;
+  ctx.clearRect(0,0,w,h);
+  ctx.strokeStyle = 'rgba(255,255,255,.06)';
+  for (let i=0;i<4;i++) {
+    const y = 16 + (h-32)*i/3;
+    ctx.beginPath(); ctx.moveTo(20,y); ctx.lineTo(w-10,y); ctx.stroke();
+  }
+  const n = HIST.length || 1;
+  series.forEach((key, si) => {
+    const vals = HIST.map(p => p[key]).map(v => (v==null? null : Number(v)));
+    const valid = vals.filter(v => v!=null && !Number.isNaN(v));
+    if (!valid.length) return;
+    const min = Math.min(...valid), max = Math.max(...valid);
+    const span = (max-min) || 1;
+    ctx.beginPath();
+    ctx.strokeStyle = colors[si];
+    ctx.lineWidth = 2.2;
+    let started=false;
+    vals.forEach((v,i) => {
+      if (v==null || Number.isNaN(v)) return;
+      const x = 24 + (w-40) * (n===1?0.5: i/(n-1));
+      const y = h-16 - ((v-min)/span) * (h-36);
+      if (!started) { ctx.moveTo(x,y); started=true; } else ctx.lineTo(x,y);
+    });
+    ctx.stroke();
+  });
+}
+function render() {
+  drawLine(document.getElementById('chartMain'), ['spell_hit','counter','placement'], ['#6ee7ff','#a78bfa','#34d399']);
+  drawLine(document.getElementById('chartSide'), ['decision','elixir'], ['#fbbf24','#fb7185']);
+}
+window.addEventListener('resize', render);
+render();
+</script>
+</body>
+</html>

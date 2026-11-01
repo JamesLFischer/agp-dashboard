@@ -1,0 +1,183 @@
+{
+ "matches_v3": {
+  "n": 281,
+  "wins": 119,
+  "losses": 151,
+  "other": 11,
+  "wr_decided": 0.441
+ },
+ "per_deck": [
+  {
+   "deck": "archers,arrows,fireball,giant,knight,mini-pekka,minions,musketeer",
+   "w": 35,
+   "g": 85,
+   "wr": 0.412
+  },
+  {
+   "deck": "barbarians,electro-spirit,fire-spirit,fireball,goblin-hut,knight,minions,musketeer",
+   "w": 40,
+   "g": 82,
+   "wr": 0.488
+  },
+  {
+   "deck": "archers,arrows,giant,goblins,knight,mini-pekka,minions,musketeer",
+   "w": 27,
+   "g": 63,
+   "wr": 0.429
+  },
+  {
+   "deck": "arrows,barbarians,giant,knight,mini-pekka,minions,musketeer,skeletons",
+   "w": 3,
+   "g": 11,
+   "wr": 0.273
+  },
+  {
+   "deck": "barbarians,electro-spirit,fireball,giant,goblin-hut,knight,minions,musketeer",
+   "w": 4,
+   "g": 9,
+   "wr": 0.444
+  },
+  {
+   "deck": "None,archers,arrows,giant,goblins,knight,mini-pekka,musketeer",
+   "w": 3,
+   "g": 5,
+   "wr": 0.6
+  },
+  {
+   "deck": "arrows,fireball,giant,knight,mini-pekka,minions,musketeer,skeletons",
+   "w": 1,
+   "g": 4,
+   "wr": 0.25
+  },
+  {
+   "deck": "None,arrows,fireball,giant,goblins,knight,mini-pekka,musketeer",
+   "w": 2,
+   "g": 2,
+   "wr": 1.0
+  },
+  {
+   "deck": "arrows,fireball,giant,goblins,knight,mini-pekka,minions,musketeer",
+   "w": 1,
+   "g": 2,
+   "wr": 0.5
+  },
+  {
+   "deck": "None,archers,arrows,fireball,giant,knight,mini-pekka,musketeer",
+   "w": 1,
+   "g": 2,
+   "wr": 0.5
+  },
+  {
+   "deck": "arrows,fireball,giant,knight,mini-pekka,minions,musketeer,spear-goblins",
+   "w": 1,
+   "g": 2,
+   "wr": 0.5
+  },
+  {
+   "deck": "archers,arrows,fireball,giant,knight,mini-pekka,minions,spear-goblins",
+   "w": 0,
+   "g": 2,
+   "wr": 0.0
+  },
+  {
+   "deck": "barbarians,electro-spirit,fireball,giant,goblin-hut,knight,minions,skeletons",
+   "w": 1,
+   "g": 1,
+   "wr": 1.0
+  }
+ ],
+ "spells": {
+  "total": 509,
+  "empty_at_cast": 1,
+  "wasted_per_match": 0.004,
+  "cast_hit_rate": 0.998
+ },
+ "spell_impact_audit_v1": {
+  "n": 75,
+  "hit": 36,
+  "hit_rate": 0.48
+ },
+ "counter": {
+  "enemy_plays": 6048,
+  "responded": 3599,
+  "worked": 3345,
+  "success_rate": 0.929
+ },
+ "meta_alignment": {
+  "source": "seen-opponent top-20 (no web ladder data yet)",
+  "deck": [
+   "barbarians",
+   "musketeer",
+   "giant",
+   "minions",
+   "fireball",
+   "goblin-hut",
+   "electro-spirit",
+   "knight"
+  ],
+  "covered": 20,
+  "of": 20,
+  "score": 1.0,
+  "uncovered": []
+ },
+ "meta_log": {
+  "reward_rows": 120,
+  "claim_taps": 358,
+  "upgrade_rows": 33,
+  "upgrades_by_day": {
+   "2026-10-28": 2,
+   "2026-10-30": 31
+  },
+  "upgrade_details": [
+   "SkeletoNs",
+   "CaNNON",
+   "BaRbaRiaNs",
+   "GobliNs",
+   "BaRbaRiaNs",
+   "BoMbeR",
+   "BoMbeR",
+   "GobliN Hut",
+   "CaNNON",
+   "GobliNs",
+   "Mega MinioN",
+   "SkeletoNs",
+   "ValkYRie",
+   "BaRbaRiaNs",
+   "TombstoNe",
+   "BoMbeR",
+   "SkeletoNs",
+   "CaNNON",
+   "SkeletoNs",
+   "ElectRo SpiRit",
+   "BattleRaM",
+   "GobliNs",
+   "ElectRo SpiRit",
+   "TombstoNe",
+   "ElectRo SpiRit",
+   "Mega MiNioN",
+   "CaNNON",
+   "ValkYRie",
+   "BoMbeR",
+   "ElectRo SpiRit",
+   "BaRbaRiaNS",
+   "BattleRaM",
+   "BoMbeR"
+  ]
+ },
+ "ml_agree": {
+  "n": 6261,
+  "agree": 1561,
+  "pct": 0.249
+ },
+ "elixir_leak": {
+  "matches_seen": 263,
+  "seconds_at_10": 2353,
+  "per_match_s": 8.9,
+  "note": "lower bound: summed gaps between planner ticks while elixir>=9.0 (strategy FULL; OCR caps ~9.5)"
+ },
+ "reward_claims_logs": {
+  "claim_taps_attempted": 105,
+  "claimed_reported": 188
+ },
+ "gold_spent_logged": 0
+}
