@@ -29,22 +29,22 @@ KPIs 6 and 7 stay blank until you greenlight, because they need the live game.
 <!-- DASHBOARD:BEGIN -->
 | KPI | Baseline | Current | Δ | Trend (last 5) | Source | Cycle |
 |---|---|---|---|---|---|---|
-| Win rate (LIVE/LOG) | 42.6% (n=195) | null | – | null → null → null → null → null | – | 24 (REVERT) |
-| Win rate (SIM) | null | null | – | null → null → null → null → null | – | 24 (REVERT) |
-| Wasted spells/match | 0.22 (n=206) @c1 | 0.22 (n=206) | = +0 | 0.22 → 0.22 → 0.22 → 0.22 → 0.22 | SIM | 24 (REVERT) |
-| Placement vs pros (heatmap cos) | 45.0% (n=905) @c1 | 58.0% (n=5494) | ▲ +13.0 pp | 58.1% → 58.3% → 58.3% → 58.0% → 58.0% | SIM+VOD | 24 (REVERT) |
-| Deck vs meta threats | 20.0% (n=20) @c1 | 55.0% (n=20) | ▲ +35.0 pp | 70.0% → 65.0% → 60.0% → 65.0% → 55.0% | LOG+WEB | 24 (REVERT) |
-| Spell hit | 48.0% (n=75) | 60.2% (n=93) | ▲ +12.2 pp | 60.2% → 60.2% → 60.2% → 60.2% → 60.2% | SIM | 24 (REVERT) |
-| Elixir waste s/match | 8.9 (n=263) | 2.33 (n=60) | ▲ -6.57 | 2.04 → 2.04 → 2.98 → 2.06 → 2.33 | SIM | 24 (REVERT) |
-| Threat coverage | 20.0% (n=20) | 85.0% (n=20) | ▲ +65.0 pp | 85.0% → 85.0% → 85.0% → 85.0% → 85.0% | LOG+VOD | 24 (REVERT) |
-| Counter success (strict) | 66.4% (n=3599) @c1 | 67.3% (n=4251) | = +0.9 pp | 66.4% → 66.4% → 66.5% → 66.8% → 67.3% | LOG | 24 (REVERT) |
-| Deck upgrades/day | 0 | null | – | null → null → null → null → null | – | 24 (REVERT) |
-| Claim rate | null | null | – | null → null → null → null → null | – | 24 (REVERT) |
-| Pro plays | 221 | 5494 | ▲ +5273 | 4277 → 4495 → 4505 → 4711 → 5494 | VOD | 24 (REVERT) |
-| Own matches | 281 | 337 | ▲ +56 | 281 → 281 → 287 → 307 → 337 | LOG | 24 (REVERT) |
-| Decision match vs pros | 57.8% (n=325) @c1 | 55.3% (n=2492) | ▼ -2.5 pp | 55.7% → 55.4% → 55.1% → 54.9% → 55.3% | SIM | 24 (REVERT) |
-| Imitation within-1 | 0.23–0.31 | 49.6% | – | 49.6% → 49.6% → 49.6% → 49.6% → 49.6% | – | 24 (REVERT) |
+| Win rate (LIVE/LOG) | 42.6% (n=195) | null | – | null → null → null → null → null | – | 25 (REVERT) |
+| Win rate (SIM) | null | null | – | null → null → null → null → null | – | 25 (REVERT) |
+| Wasted spells/match | 0.22 (n=206) @c1 | 0.22 (n=206) | = +0 | 0.22 → 0.22 → 0.22 → 0.22 → 0.22 | SIM | 25 (REVERT) |
+| Placement vs pros (heatmap cos) | 45.0% (n=905) @c1 | 57.8% (n=5808) | ▲ +12.8 pp | 58.3% → 58.3% → 58.0% → 58.0% → 57.8% | SIM+VOD | 25 (REVERT) |
+| Deck vs meta threats | 20.0% (n=20) @c1 | 60.0% (n=20) | ▲ +40.0 pp | 65.0% → 60.0% → 65.0% → 55.0% → 60.0% | LOG+WEB | 25 (REVERT) |
+| Spell hit | 48.0% (n=75) | 60.2% (n=93) | ▲ +12.2 pp | 60.2% → 60.2% → 60.2% → 60.2% → 60.2% | SIM | 25 (REVERT) |
+| Elixir waste s/match | 8.9 (n=263) | 1.96 (n=60) | ▲ -6.94 | 2.04 → 2.98 → 2.06 → 2.33 → 1.96 | SIM | 25 (REVERT) |
+| Threat coverage | 20.0% (n=20) | 85.0% (n=20) | ▲ +65.0 pp | 85.0% → 85.0% → 85.0% → 85.0% → 85.0% | LOG+VOD | 25 (REVERT) |
+| Counter success (strict) | 66.4% (n=3599) @c1 | 67.3% (n=4254) | = +0.9 pp | 66.4% → 66.5% → 66.8% → 67.3% → 67.3% | LOG | 25 (REVERT) |
+| Deck upgrades/day | 0 | null | – | null → null → null → null → null | – | 25 (REVERT) |
+| Claim rate | null | null | – | null → null → null → null → null | – | 25 (REVERT) |
+| Pro plays | 221 | 5808 | ▲ +5587 | 4495 → 4505 → 4711 → 5494 → 5808 | VOD | 25 (REVERT) |
+| Own matches | 281 | 339 | ▲ +58 | 281 → 287 → 307 → 337 → 339 | LOG | 25 (REVERT) |
+| Decision match vs pros | 57.8% (n=325) @c1 | 55.2% (n=2712) | ▼ -2.6 pp | 55.4% → 55.1% → 54.9% → 55.3% → 55.2% | SIM | 25 (REVERT) |
+| Imitation within-1 | 0.23–0.31 | 49.6% | – | 49.6% → 49.6% → 49.6% → 49.6% → 49.6% | – | 25 (REVERT) |
 
-_Tests: 65/65 · last change: agp_loop pass (live) · 2026-11-02T08:28:35-08:00_
+_Tests: 65/65 · last change: agp_loop pass (live) · 2026-11-02T12:21:02-08:00_
 <!-- DASHBOARD:END -->
 Chart: agp/v4/dashboard.png (matplotlib, one small panel per KPI, baseline drawn as a dashed line).
