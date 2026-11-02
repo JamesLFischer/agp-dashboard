@@ -1,13 +1,13 @@
 {
  "schema": "agp-dashboard/1",
- "exported": "2026-11-02T12:21:13-0800",
+ "exported": "2026-11-02T14:21:15-0800",
  "live_paused": false,
  "idle": {
   "pattern": "run_strat_20261102-*.log",
-  "wall_s": 26836,
-  "battle_s": 14418,
-  "idle_s": 12418,
-  "idle_pct": 46.3,
+  "wall_s": 33591,
+  "battle_s": 19999,
+  "idle_s": 13592,
+  "idle_pct": 40.5,
   "target_pct": 5,
   "gaps_over_60s": [
    [
@@ -241,9 +241,21 @@
    [
     "10:33:35",
     186
+   ],
+   [
+    "12:27:16",
+    102
+   ],
+   [
+    "13:54:22",
+    63
+   ],
+   [
+    "14:13:49",
+    196
    ]
   ],
-  "ts": "2026-11-02T12:21:13"
+  "ts": "2026-11-02T14:21:14"
  },
  "labels": {
   "LIVE": "real ladder matches",
@@ -291,8 +303,8 @@
   "notes": "WR 83-112 chat tally; strict counter success + decision_match defined/baselined in cycle 1"
  },
  "latest": {
-  "cycle": 25,
-  "ts": "2026-11-02T12:21:02-08:00",
+  "cycle": 26,
+  "ts": "2026-11-02T14:21:03-08:00",
   "mode": "offline",
   "change": "agp_loop pass (live)",
   "git": null,
@@ -306,23 +318,23 @@
    "wasted_spells_per_match_n": 206,
    "placement_heatmap_sim": 0.578,
    "placement_heatmap_sim_n": 5808,
-   "deck_meta_alignment": 0.6,
+   "deck_meta_alignment": 0.65,
    "deck_meta_alignment_n": 20,
-   "deck_meta_weighted": 0.791,
+   "deck_meta_weighted": 0.96,
    "spell_hit": 0.602,
    "spell_hit_n": 93,
-   "elixir_waste_s": 1.96,
+   "elixir_waste_s": 2.08,
    "elixir_waste_s_n": 60,
    "threat_coverage": 0.85,
    "threat_coverage_n": 20,
    "counter_success_strict": 0.673,
-   "counter_success_strict_n": 4254,
+   "counter_success_strict_n": 4395,
    "deck_upgrades_day": null,
    "claim_rate": null,
    "pro_plays": 5808,
-   "own_matches": 339,
-   "decision_match": 0.552,
-   "decision_match_n": 2712,
+   "own_matches": 359,
+   "decision_match": 0.548,
+   "decision_match_n": 2744,
    "bc_within1": 0.496,
    "tests_pass": "65/65"
   },
@@ -339,7 +351,7 @@
    "placement_heatmap_sim": "SIM+VOD",
    "deck_meta_alignment": "LOG+WEB"
   },
-  "notes": "target deck_meta not improved 0.65->0.6"
+  "notes": "target deck_meta not improved 0.65->0.65"
  },
  "history": [
   {
@@ -1650,6 +1662,57 @@
     "deck_meta_alignment": "LOG+WEB"
    },
    "notes": "target deck_meta not improved 0.65->0.6"
+  },
+  {
+   "cycle": 26,
+   "ts": "2026-11-02T14:21:03-08:00",
+   "mode": "offline",
+   "change": "agp_loop pass (live)",
+   "git": null,
+   "decision": "REVERT",
+   "kpi": {
+    "win_rate": null,
+    "win_rate_n": 0,
+    "win_rate_sim": null,
+    "win_rate_sim_n": 0,
+    "wasted_spells_per_match": 0.22,
+    "wasted_spells_per_match_n": 206,
+    "placement_heatmap_sim": 0.578,
+    "placement_heatmap_sim_n": 5808,
+    "deck_meta_alignment": 0.65,
+    "deck_meta_alignment_n": 20,
+    "deck_meta_weighted": 0.96,
+    "spell_hit": 0.602,
+    "spell_hit_n": 93,
+    "elixir_waste_s": 2.08,
+    "elixir_waste_s_n": 60,
+    "threat_coverage": 0.85,
+    "threat_coverage_n": 20,
+    "counter_success_strict": 0.673,
+    "counter_success_strict_n": 4395,
+    "deck_upgrades_day": null,
+    "claim_rate": null,
+    "pro_plays": 5808,
+    "own_matches": 359,
+    "decision_match": 0.548,
+    "decision_match_n": 2744,
+    "bc_within1": 0.496,
+    "tests_pass": "65/65"
+   },
+   "source": {
+    "spell_hit": "SIM",
+    "elixir_waste_s": "SIM",
+    "threat_coverage": "LOG+VOD",
+    "counter_success_strict": "LOG",
+    "pro_plays": "VOD",
+    "own_matches": "LOG",
+    "decision_match": "SIM",
+    "tests_pass": "SIM",
+    "wasted_spells_per_match": "SIM",
+    "placement_heatmap_sim": "SIM+VOD",
+    "deck_meta_alignment": "LOG+WEB"
+   },
+   "notes": "target deck_meta not improved 0.65->0.65"
   }
  ],
  "ready": {
@@ -1665,7 +1728,7 @@
    {
     "gate": "Elixir waste s/match (sim)",
     "kpi": "elixir_waste_s",
-    "value": 1.96,
+    "value": 2.08,
     "need": "<=4.0",
     "pass": true
    },
@@ -1693,14 +1756,14 @@
    {
     "gate": "Deck vs top meta threats",
     "kpi": "deck_meta_alignment",
-    "value": 0.6,
+    "value": 0.65,
     "need": ">=0.6",
     "pass": true
    },
    {
     "gate": "Deck vs meta (threat-weighted, ruling B)",
     "kpi": "deck_meta_weighted",
-    "value": 0.791,
+    "value": 0.96,
     "need": ">=0.6",
     "pass": true
    },

@@ -1,108 +1,5 @@
 [
  {
-  "cycle_dir": "cycle_021",
-  "cycle": 21,
-  "items": [
-   {
-    "file": "spell_impact/00_arrows_hit.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "arrows HIT @ match-20261030-160018.mkv t=140.0s"
-   },
-   {
-    "file": "spell_impact/01_fireball_hit.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "fireball HIT @ match-20261030-214826.mkv t=139.3s"
-   },
-   {
-    "file": "spell_impact/02_fireball_hit.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "fireball HIT @ match-20261031-042202.mkv t=149.3s"
-   },
-   {
-    "file": "spell_impact/03_fireball_miss.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "fireball MISS @ match-20261030-233416.mkv t=159.3s"
-   },
-   {
-    "file": "spell_impact/04_fireball_miss.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "fireball MISS @ match-20261031-034019.mkv t=85.3s"
-   },
-   {
-    "file": "spell_impact/05_fireball_miss.jpg",
-    "kind": "spell_impact",
-    "source": "SIM (saved bot match video)",
-    "caption": "fireball MISS @ match-20261030-210700.mkv t=32.3s"
-   },
-   {
-    "file": "placement/heatmap_ours_vs_pros.png",
-    "kind": "placement",
-    "source": "LOG+VOD",
-    "caption": "Where cards get placed: our bot/demos vs pro VODs"
-   },
-   {
-    "file": "deck/deck_vs_meta.png",
-    "kind": "deck",
-    "source": "LOG+WEB",
-    "caption": "Deck covers 13/20 top ladder threats with a proven counter"
-   },
-   {
-    "file": "counters/yt_w2467guu24g-056.jpg",
-    "kind": "counter",
-    "source": "VOD",
-    "caption": "opponent card at drop: yt_w2467guu24g-056.jpg"
-   },
-   {
-    "file": "counters/yt_w2467guu24g-057.jpg",
-    "kind": "counter",
-    "source": "VOD",
-    "caption": "opponent card at drop: yt_w2467guu24g-057.jpg"
-   },
-   {
-    "file": "counters/yt_w2467guu24g-058.jpg",
-    "kind": "counter",
-    "source": "VOD",
-    "caption": "opponent card at drop: yt_w2467guu24g-058.jpg"
-   },
-   {
-    "file": "counters/yt_w2467guu24g-059.jpg",
-    "kind": "counter",
-    "source": "VOD",
-    "caption": "opponent card at drop: yt_w2467guu24g-059.jpg"
-   },
-   {
-    "file": "counters/20261031-115807-003.jpg",
-    "kind": "counter",
-    "source": "LOG",
-    "caption": "opponent card at drop: 20261031-115807-003.jpg"
-   },
-   {
-    "file": "counters/20261031-115807-004.jpg",
-    "kind": "counter",
-    "source": "LOG",
-    "caption": "opponent card at drop: 20261031-115807-004.jpg"
-   },
-   {
-    "file": "counters/20261031-115807-005.jpg",
-    "kind": "counter",
-    "source": "LOG",
-    "caption": "opponent card at drop: 20261031-115807-005.jpg"
-   },
-   {
-    "file": "counters/20261031-115807-006.jpg",
-    "kind": "counter",
-    "source": "LOG",
-    "caption": "opponent card at drop: 20261031-115807-006.jpg"
-   }
-  ],
-  "note": "offline evidence only; live recording paused"
- },
- {
   "cycle_dir": "cycle_022",
   "cycle": 22,
   "items": [
@@ -510,6 +407,109 @@
     "kind": "counter",
     "source": "LOG",
     "caption": "opponent card at drop: 20261102-094942-004.jpg"
+   }
+  ],
+  "note": "offline evidence only; live recording paused"
+ },
+ {
+  "cycle_dir": "cycle_026",
+  "cycle": 26,
+  "items": [
+   {
+    "file": "spell_impact/00_fireball_hit.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "fireball HIT @ match-20261031-104345.mkv t=142.3s"
+   },
+   {
+    "file": "spell_impact/01_arrows_hit.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "arrows HIT @ match-20261030-162337.mkv t=95.0s"
+   },
+   {
+    "file": "spell_impact/02_fireball_hit.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "fireball HIT @ match-20261031-031223.mkv t=72.3s"
+   },
+   {
+    "file": "spell_impact/03_arrows_miss.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "arrows MISS @ match-20261030-183057.mkv t=196.0s"
+   },
+   {
+    "file": "spell_impact/04_fireball_miss.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "fireball MISS @ match-20261031-002734.mkv t=23.3s"
+   },
+   {
+    "file": "spell_impact/05_fireball_miss.jpg",
+    "kind": "spell_impact",
+    "source": "SIM (saved bot match video)",
+    "caption": "fireball MISS @ match-20261031-032116.mkv t=72.3s"
+   },
+   {
+    "file": "placement/heatmap_ours_vs_pros.png",
+    "kind": "placement",
+    "source": "LOG+VOD",
+    "caption": "Where cards get placed: our bot/demos vs pro VODs"
+   },
+   {
+    "file": "deck/deck_vs_meta.png",
+    "kind": "deck",
+    "source": "LOG+WEB",
+    "caption": "Deck covers 13/20 top ladder threats with a proven counter"
+   },
+   {
+    "file": "counters/yt_xBlUVErz_I0-056.jpg",
+    "kind": "counter",
+    "source": "VOD",
+    "caption": "opponent card at drop: yt_xBlUVErz_I0-056.jpg"
+   },
+   {
+    "file": "counters/yt_xBlUVErz_I0-057.jpg",
+    "kind": "counter",
+    "source": "VOD",
+    "caption": "opponent card at drop: yt_xBlUVErz_I0-057.jpg"
+   },
+   {
+    "file": "counters/yt_xBlUVErz_I0-058.jpg",
+    "kind": "counter",
+    "source": "VOD",
+    "caption": "opponent card at drop: yt_xBlUVErz_I0-058.jpg"
+   },
+   {
+    "file": "counters/yt_xBlUVErz_I0-059.jpg",
+    "kind": "counter",
+    "source": "VOD",
+    "caption": "opponent card at drop: yt_xBlUVErz_I0-059.jpg"
+   },
+   {
+    "file": "counters/20261102-141702-028.jpg",
+    "kind": "counter",
+    "source": "LOG",
+    "caption": "opponent card at drop: 20261102-141702-028.jpg"
+   },
+   {
+    "file": "counters/20261102-141702-029.jpg",
+    "kind": "counter",
+    "source": "LOG",
+    "caption": "opponent card at drop: 20261102-141702-029.jpg"
+   },
+   {
+    "file": "counters/20261102-141702-030.jpg",
+    "kind": "counter",
+    "source": "LOG",
+    "caption": "opponent card at drop: 20261102-141702-030.jpg"
+   },
+   {
+    "file": "counters/20261102-141702-031.jpg",
+    "kind": "counter",
+    "source": "LOG",
+    "caption": "opponent card at drop: 20261102-141702-031.jpg"
    }
   ],
   "note": "offline evidence only; live recording paused"
