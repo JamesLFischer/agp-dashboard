@@ -1,13 +1,13 @@
 {
  "schema": "agp-dashboard/1",
- "exported": "2026-11-02T01:58:05-0800",
+ "exported": "2026-11-02T08:28:47-0800",
  "live_paused": false,
  "idle": {
   "pattern": "run_strat_20261102-*.log",
-  "wall_s": 6077,
-  "battle_s": 2727,
-  "idle_s": 3350,
-  "idle_pct": 55.1,
+  "wall_s": 20592,
+  "battle_s": 14014,
+  "idle_s": 6578,
+  "idle_pct": 31.9,
   "target_pct": 5,
   "gaps_over_60s": [
    [
@@ -21,10 +21,6 @@
    [
     "00:38:50",
     112
-   ],
-   [
-    "00:43:21",
-    228
    ],
    [
     "00:49:27",
@@ -109,9 +105,65 @@
    [
     "01:52:52",
     105
+   ],
+   [
+    "02:08:21",
+    146
+   ],
+   [
+    "02:23:37",
+    451
+   ],
+   [
+    "02:31:38",
+    144
+   ],
+   [
+    "02:34:08",
+    143
+   ],
+   [
+    "02:36:38",
+    134
+   ],
+   [
+    "02:51:37",
+    186
+   ],
+   [
+    "03:17:14",
+    100
+   ],
+   [
+    "03:31:53",
+    98
+   ],
+   [
+    "03:53:27",
+    148
+   ],
+   [
+    "04:06:30",
+    137
+   ],
+   [
+    "04:29:58",
+    334
+   ],
+   [
+    "04:35:59",
+    85
+   ],
+   [
+    "05:06:43",
+    101
+   ],
+   [
+    "05:31:55",
+    301
    ]
   ],
-  "ts": "2026-11-02T01:58:04"
+  "ts": "2026-11-02T08:28:47"
  },
  "labels": {
   "LIVE": "real ladder matches",
@@ -159,8 +211,8 @@
   "notes": "WR 83-112 chat tally; strict counter success + decision_match defined/baselined in cycle 1"
  },
  "latest": {
-  "cycle": 23,
-  "ts": "2026-11-02T01:57:56-08:00",
+  "cycle": 24,
+  "ts": "2026-11-02T08:28:35-08:00",
   "mode": "offline",
   "change": "agp_loop pass (live)",
   "git": null,
@@ -173,24 +225,24 @@
    "wasted_spells_per_match": 0.22,
    "wasted_spells_per_match_n": 206,
    "placement_heatmap_sim": 0.58,
-   "placement_heatmap_sim_n": 4711,
-   "deck_meta_alignment": 0.65,
+   "placement_heatmap_sim_n": 5494,
+   "deck_meta_alignment": 0.55,
    "deck_meta_alignment_n": 20,
-   "deck_meta_weighted": 0.93,
+   "deck_meta_weighted": 0.745,
    "spell_hit": 0.602,
    "spell_hit_n": 93,
-   "elixir_waste_s": 2.06,
+   "elixir_waste_s": 2.33,
    "elixir_waste_s_n": 60,
    "threat_coverage": 0.85,
    "threat_coverage_n": 20,
-   "counter_success_strict": 0.668,
-   "counter_success_strict_n": 3943,
+   "counter_success_strict": 0.673,
+   "counter_success_strict_n": 4251,
    "deck_upgrades_day": null,
    "claim_rate": null,
-   "pro_plays": 4711,
-   "own_matches": 307,
-   "decision_match": 0.549,
-   "decision_match_n": 2233,
+   "pro_plays": 5494,
+   "own_matches": 337,
+   "decision_match": 0.553,
+   "decision_match_n": 2492,
    "bc_within1": 0.496,
    "tests_pass": "65/65"
   },
@@ -207,7 +259,7 @@
    "placement_heatmap_sim": "SIM+VOD",
    "deck_meta_alignment": "LOG+WEB"
   },
-  "notes": "target deck_meta not improved 0.65->0.65"
+  "notes": "target deck_meta not improved 0.65->0.55; deck_meta_w regressed 8.4% (0.813->0.745)"
  },
  "history": [
   {
@@ -1416,6 +1468,57 @@
     "deck_meta_alignment": "LOG+WEB"
    },
    "notes": "target deck_meta not improved 0.65->0.65"
+  },
+  {
+   "cycle": 24,
+   "ts": "2026-11-02T08:28:35-08:00",
+   "mode": "offline",
+   "change": "agp_loop pass (live)",
+   "git": null,
+   "decision": "REVERT",
+   "kpi": {
+    "win_rate": null,
+    "win_rate_n": 0,
+    "win_rate_sim": null,
+    "win_rate_sim_n": 0,
+    "wasted_spells_per_match": 0.22,
+    "wasted_spells_per_match_n": 206,
+    "placement_heatmap_sim": 0.58,
+    "placement_heatmap_sim_n": 5494,
+    "deck_meta_alignment": 0.55,
+    "deck_meta_alignment_n": 20,
+    "deck_meta_weighted": 0.745,
+    "spell_hit": 0.602,
+    "spell_hit_n": 93,
+    "elixir_waste_s": 2.33,
+    "elixir_waste_s_n": 60,
+    "threat_coverage": 0.85,
+    "threat_coverage_n": 20,
+    "counter_success_strict": 0.673,
+    "counter_success_strict_n": 4251,
+    "deck_upgrades_day": null,
+    "claim_rate": null,
+    "pro_plays": 5494,
+    "own_matches": 337,
+    "decision_match": 0.553,
+    "decision_match_n": 2492,
+    "bc_within1": 0.496,
+    "tests_pass": "65/65"
+   },
+   "source": {
+    "spell_hit": "SIM",
+    "elixir_waste_s": "SIM",
+    "threat_coverage": "LOG+VOD",
+    "counter_success_strict": "LOG",
+    "pro_plays": "VOD",
+    "own_matches": "LOG",
+    "decision_match": "SIM",
+    "tests_pass": "SIM",
+    "wasted_spells_per_match": "SIM",
+    "placement_heatmap_sim": "SIM+VOD",
+    "deck_meta_alignment": "LOG+WEB"
+   },
+   "notes": "target deck_meta not improved 0.65->0.55; deck_meta_w regressed 8.4% (0.813->0.745)"
   }
  ],
  "ready": {
@@ -1431,7 +1534,7 @@
    {
     "gate": "Elixir waste s/match (sim)",
     "kpi": "elixir_waste_s",
-    "value": 2.06,
+    "value": 2.33,
     "need": "<=4.0",
     "pass": true
    },
@@ -1445,7 +1548,7 @@
    {
     "gate": "Strict counter success",
     "kpi": "counter_success_strict",
-    "value": 0.668,
+    "value": 0.673,
     "need": ">=0.7",
     "pass": false
    },
@@ -1459,14 +1562,14 @@
    {
     "gate": "Deck vs top meta threats",
     "kpi": "deck_meta_alignment",
-    "value": 0.65,
+    "value": 0.55,
     "need": ">=0.6",
-    "pass": true
+    "pass": false
    },
    {
     "gate": "Deck vs meta (threat-weighted, ruling B)",
     "kpi": "deck_meta_weighted",
-    "value": 0.93,
+    "value": 0.745,
     "need": ">=0.6",
     "pass": true
    },
@@ -1480,7 +1583,7 @@
    {
     "gate": "Pro plays >=2000 (>=3 decks) or plateau with KEEPs",
     "kpi": "pro_plays",
-    "value": 4711,
+    "value": 5494,
     "need": ">=2000",
     "pass": true
    },
