@@ -1,11 +1,11 @@
 {
   "product": "AI Game Player",
   "tagline": "Progress you can watch \u2014 the AI's climb, with receipts.",
-  "generated_at": "2026-11-01T15:15:33-08:00",
+  "generated_at": "2026-11-01T22:22:35-08:00",
   "mode": "offline",
-  "cycle": 17,
-  "decision": "REVERT",
-  "change": "wire measured held-out bc within1 (0.496, sha-locked to bc.pt) into KPI",
+  "cycle": 21,
+  "decision": "KEEP",
+  "change": "agp_loop pass (offline)",
   "live_status": "paused",
   "baseline_cycle": 0,
   "rows": [
@@ -90,8 +90,8 @@
       "key": "pro_plays",
       "label": "Pro plays learned",
       "baseline": "221",
-      "current": "3667",
-      "delta": "+3446",
+      "current": "4495",
+      "delta": "+4274",
       "trend": "up-good",
       "source": "VOD",
       "note": null,
@@ -112,7 +112,7 @@
       "key": "decision_match",
       "label": "Decision-match vs pros",
       "baseline": "\u2014",
-      "current": "57.2%",
+      "current": "55.4%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM",
@@ -134,7 +134,7 @@
       "key": "placement_heatmap_sim",
       "label": "Placement accuracy (SIM)",
       "baseline": "\u2014",
-      "current": "56.9%",
+      "current": "58.3%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "SIM+VOD",
@@ -145,7 +145,7 @@
       "key": "deck_meta_alignment",
       "label": "Deck building vs meta",
       "baseline": "\u2014",
-      "current": "60.0%",
+      "current": "65.0%",
       "delta": "\u2014",
       "trend": "flat",
       "source": "LOG+WEB",
@@ -156,13 +156,13 @@
   "axes": [
     {
       "label": "Placement accuracy",
-      "value": "56.9%",
+      "value": "58.3%",
       "source": "SIM+VOD",
       "detail": "SIM heatmap / VOD overlays"
     },
     {
       "label": "Deck building vs meta",
-      "value": "60.0%",
+      "value": "65.0%",
       "source": "LOG+WEB",
       "detail": "Alignment to seen-opponent / meta plans"
     },
@@ -185,10 +185,16 @@
       "detail": "Seconds elixir wasted (lower better)"
     },
     {
-      "label": "Upgrades / rewards",
-      "value": "paused",
+      "label": "Idle (non-battle) time",
+      "value": "40.3%",
       "source": "LIVE",
-      "detail": "LIVE paused until James greenlights play"
+      "detail": "Share of live wall time outside battles (target < 5%)"
+    },
+    {
+      "label": "Upgrades / rewards",
+      "value": "live",
+      "source": "LIVE",
+      "detail": "Gold-only rewards/upgrades between matches (30 s budget); gems never spent"
     }
   ],
   "history": [
@@ -353,6 +359,42 @@
       "decision": 0.572,
       "elixir": 2.04,
       "decision_tag": "REVERT"
+    },
+    {
+      "cycle": 18,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.578,
+      "decision": 0.561,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 19,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.578,
+      "decision": 0.561,
+      "elixir": 2.04,
+      "decision_tag": "REVERT"
+    },
+    {
+      "cycle": 20,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.581,
+      "decision": 0.557,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
+    },
+    {
+      "cycle": 21,
+      "spell_hit": 0.602,
+      "counter": 0.664,
+      "placement": 0.583,
+      "decision": 0.554,
+      "elixir": 2.04,
+      "decision_tag": "KEEP"
     }
   ],
   "evidence": [

@@ -142,7 +142,8 @@ def main():
         {"label": "Counters", "value": fmt(ck.get("counter_success_strict"), True), "source": cs.get("counter_success_strict", "LOG"), "detail": "Strict counter success"},
         {"label": "Spell aim", "value": fmt(ck.get("spell_hit"), True), "source": cs.get("spell_hit", "SIM"), "detail": "Spell impact audit / SIM casts"},
         {"label": "Movement / elixir", "value": fmt(ck.get("elixir_waste_s"), False), "source": cs.get("elixir_waste_s", "SIM"), "detail": "Seconds elixir wasted (lower better)"},
-        {"label": "Upgrades / rewards", "value": "paused", "source": "LIVE", "detail": "LIVE paused until James greenlights play"},
+        {"label": "Idle (non-battle) time", "value": (lambda d: f"{d['idle_pct']}%" if d else "n/a")(json.loads((ROOT / "v4" / "idle_kpi.json").read_text()) if (ROOT / "v4" / "idle_kpi.json").exists() else None), "source": "LIVE", "detail": "Share of live wall time outside battles (target < 5%)"},
+        {"label": "Upgrades / rewards", "value": "live", "source": "LIVE", "detail": "Gold-only rewards/upgrades between matches (30 s budget); gems never spent"},
     ]
     evidence = json.loads((DASH / "assets" / "evidence.json").read_text()) if (DASH / "assets" / "evidence.json").exists() else []
     hist_points = []
