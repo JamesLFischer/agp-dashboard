@@ -1,7 +1,38 @@
 {
  "schema": "agp-dashboard/1",
- "exported": "2026-11-01T22:22:41-0800",
- "live_paused": true,
+ "exported": "2026-11-01T23:36:16-0800",
+ "live_paused": false,
+ "idle": {
+  "pattern": "run_strat_20261101-23*.log",
+  "wall_s": 1712,
+  "battle_s": 1022,
+  "idle_s": 690,
+  "idle_pct": 40.3,
+  "target_pct": 5,
+  "gaps_over_60s": [
+   [
+    "23:03:24",
+    201
+   ],
+   [
+    "23:09:34",
+    75
+   ],
+   [
+    "23:16:12",
+    63
+   ],
+   [
+    "23:20:30",
+    66
+   ],
+   [
+    "23:24:54",
+    190
+   ]
+  ],
+  "ts": "2026-11-01T23:32:07"
+ },
  "labels": {
   "LIVE": "real ladder matches",
   "LOG": "recorded past matches",
@@ -48,12 +79,12 @@
   "notes": "WR 83-112 chat tally; strict counter success + decision_match defined/baselined in cycle 1"
  },
  "latest": {
-  "cycle": 21,
-  "ts": "2026-11-01T22:22:35-08:00",
+  "cycle": 22,
+  "ts": "2026-11-01T23:36:10-08:00",
   "mode": "offline",
-  "change": "agp_loop pass (offline)",
+  "change": "agp_loop pass (live)",
   "git": null,
-  "decision": "KEEP",
+  "decision": "REVERT",
   "kpi": {
    "win_rate": null,
    "win_rate_n": 0,
@@ -62,24 +93,24 @@
    "wasted_spells_per_match": 0.22,
    "wasted_spells_per_match_n": 206,
    "placement_heatmap_sim": 0.583,
-   "placement_heatmap_sim_n": 4495,
-   "deck_meta_alignment": 0.65,
+   "placement_heatmap_sim_n": 4505,
+   "deck_meta_alignment": 0.6,
    "deck_meta_alignment_n": 20,
-   "deck_meta_weighted": 0.932,
+   "deck_meta_weighted": 0.747,
    "spell_hit": 0.602,
    "spell_hit_n": 93,
-   "elixir_waste_s": 2.04,
+   "elixir_waste_s": 2.98,
    "elixir_waste_s_n": 60,
    "threat_coverage": 0.85,
    "threat_coverage_n": 20,
-   "counter_success_strict": 0.664,
-   "counter_success_strict_n": 3599,
+   "counter_success_strict": 0.665,
+   "counter_success_strict_n": 3692,
    "deck_upgrades_day": null,
    "claim_rate": null,
-   "pro_plays": 4495,
-   "own_matches": 281,
-   "decision_match": 0.554,
-   "decision_match_n": 2101,
+   "pro_plays": 4505,
+   "own_matches": 287,
+   "decision_match": 0.551,
+   "decision_match_n": 2109,
    "bc_within1": 0.496,
    "tests_pass": "65/65"
   },
@@ -96,7 +127,7 @@
    "placement_heatmap_sim": "SIM+VOD",
    "deck_meta_alignment": "LOG+WEB"
   },
-  "notes": ""
+  "notes": "target deck_meta not improved 0.65->0.6; leak_s_per_match regressed 55.2% (1.92->2.98); deck_meta_w regressed 8.1% (0.813->0.747)"
  },
  "history": [
   {
@@ -1203,6 +1234,57 @@
     "deck_meta_alignment": "LOG+WEB"
    },
    "notes": ""
+  },
+  {
+   "cycle": 22,
+   "ts": "2026-11-01T23:36:10-08:00",
+   "mode": "offline",
+   "change": "agp_loop pass (live)",
+   "git": null,
+   "decision": "REVERT",
+   "kpi": {
+    "win_rate": null,
+    "win_rate_n": 0,
+    "win_rate_sim": null,
+    "win_rate_sim_n": 0,
+    "wasted_spells_per_match": 0.22,
+    "wasted_spells_per_match_n": 206,
+    "placement_heatmap_sim": 0.583,
+    "placement_heatmap_sim_n": 4505,
+    "deck_meta_alignment": 0.6,
+    "deck_meta_alignment_n": 20,
+    "deck_meta_weighted": 0.747,
+    "spell_hit": 0.602,
+    "spell_hit_n": 93,
+    "elixir_waste_s": 2.98,
+    "elixir_waste_s_n": 60,
+    "threat_coverage": 0.85,
+    "threat_coverage_n": 20,
+    "counter_success_strict": 0.665,
+    "counter_success_strict_n": 3692,
+    "deck_upgrades_day": null,
+    "claim_rate": null,
+    "pro_plays": 4505,
+    "own_matches": 287,
+    "decision_match": 0.551,
+    "decision_match_n": 2109,
+    "bc_within1": 0.496,
+    "tests_pass": "65/65"
+   },
+   "source": {
+    "spell_hit": "SIM",
+    "elixir_waste_s": "SIM",
+    "threat_coverage": "LOG+VOD",
+    "counter_success_strict": "LOG",
+    "pro_plays": "VOD",
+    "own_matches": "LOG",
+    "decision_match": "SIM",
+    "tests_pass": "SIM",
+    "wasted_spells_per_match": "SIM",
+    "placement_heatmap_sim": "SIM+VOD",
+    "deck_meta_alignment": "LOG+WEB"
+   },
+   "notes": "target deck_meta not improved 0.65->0.6; leak_s_per_match regressed 55.2% (1.92->2.98); deck_meta_w regressed 8.1% (0.813->0.747)"
   }
  ],
  "ready": {
@@ -1218,7 +1300,7 @@
    {
     "gate": "Elixir waste s/match (sim)",
     "kpi": "elixir_waste_s",
-    "value": 2.04,
+    "value": 2.98,
     "need": "<=4.0",
     "pass": true
    },
@@ -1232,7 +1314,7 @@
    {
     "gate": "Strict counter success",
     "kpi": "counter_success_strict",
-    "value": 0.664,
+    "value": 0.665,
     "need": ">=0.7",
     "pass": false
    },
@@ -1246,14 +1328,14 @@
    {
     "gate": "Deck vs top meta threats",
     "kpi": "deck_meta_alignment",
-    "value": 0.65,
+    "value": 0.6,
     "need": ">=0.6",
     "pass": true
    },
    {
     "gate": "Deck vs meta (threat-weighted, ruling B)",
     "kpi": "deck_meta_weighted",
-    "value": 0.932,
+    "value": 0.747,
     "need": ">=0.6",
     "pass": true
    },
@@ -1267,7 +1349,7 @@
    {
     "gate": "Pro plays >=2000 (>=3 decks) or plateau with KEEPs",
     "kpi": "pro_plays",
-    "value": 4495,
+    "value": 4505,
     "need": ">=2000",
     "pass": true
    },
