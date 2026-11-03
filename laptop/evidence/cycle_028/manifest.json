@@ -1,41 +1,41 @@
 {
- "cycle": 23,
+ "cycle": 28,
  "items": [
   {
-   "file": "spell_impact/00_fireball_hit.jpg",
+   "file": "spell_impact/00_arrows_hit.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "fireball HIT @ match-20261031-111728.mkv t=203.3s"
+   "caption": "arrows HIT @ match-20261030-144759.mkv t=24.0s"
   },
   {
-   "file": "spell_impact/01_arrows_hit.jpg",
+   "file": "spell_impact/01_fireball_hit.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "arrows HIT @ match-20261030-182306.mkv t=30.0s"
+   "caption": "fireball HIT @ match-20261031-104345.mkv t=142.3s"
   },
   {
    "file": "spell_impact/02_arrows_hit.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "arrows HIT @ match-20261030-142535.mkv t=203.0s"
+   "caption": "arrows HIT @ match-20261030-145434.mkv t=111.0s"
   },
   {
-   "file": "spell_impact/03_arrows_miss.jpg",
+   "file": "spell_impact/03_fireball_miss.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "arrows MISS @ match-20261030-131928.mkv t=128.0s"
+   "caption": "fireball MISS @ match-20261031-023703.mkv t=178.3s"
   },
   {
    "file": "spell_impact/04_fireball_miss.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "fireball MISS @ match-20261031-031223.mkv t=155.3s"
+   "caption": "fireball MISS @ match-20261031-032116.mkv t=72.3s"
   },
   {
    "file": "spell_impact/05_fireball_miss.jpg",
    "kind": "spell_impact",
    "source": "SIM (saved bot match video)",
-   "caption": "fireball MISS @ match-20261030-213508.mkv t=22.3s"
+   "caption": "fireball MISS @ match-20261031-095426.mkv t=123.3s"
   },
   {
    "file": "placement/heatmap_ours_vs_pros.png",
@@ -50,52 +50,52 @@
    "caption": "Deck covers 13/20 top ladder threats with a proven counter"
   },
   {
-   "file": "counters/yt_w2467guu24g-056.jpg",
+   "file": "counters/yt_xBlUVErz_I0-056.jpg",
    "kind": "counter",
    "source": "VOD",
-   "caption": "opponent card at drop: yt_w2467guu24g-056.jpg"
+   "caption": "opponent card at drop: yt_xBlUVErz_I0-056.jpg"
   },
   {
-   "file": "counters/yt_w2467guu24g-057.jpg",
+   "file": "counters/yt_xBlUVErz_I0-057.jpg",
    "kind": "counter",
    "source": "VOD",
-   "caption": "opponent card at drop: yt_w2467guu24g-057.jpg"
+   "caption": "opponent card at drop: yt_xBlUVErz_I0-057.jpg"
   },
   {
-   "file": "counters/yt_w2467guu24g-058.jpg",
+   "file": "counters/yt_xBlUVErz_I0-058.jpg",
    "kind": "counter",
    "source": "VOD",
-   "caption": "opponent card at drop: yt_w2467guu24g-058.jpg"
+   "caption": "opponent card at drop: yt_xBlUVErz_I0-058.jpg"
   },
   {
-   "file": "counters/yt_w2467guu24g-059.jpg",
+   "file": "counters/yt_xBlUVErz_I0-059.jpg",
    "kind": "counter",
    "source": "VOD",
-   "caption": "opponent card at drop: yt_w2467guu24g-059.jpg"
+   "caption": "opponent card at drop: yt_xBlUVErz_I0-059.jpg"
   },
   {
-   "file": "counters/20261102-015422-014.jpg",
+   "file": "counters/20261102-164756-015.jpg",
    "kind": "counter",
    "source": "LOG",
-   "caption": "opponent card at drop: 20261102-015422-014.jpg"
+   "caption": "opponent card at drop: 20261102-164756-015.jpg"
   },
   {
-   "file": "counters/20261102-015422-015.jpg",
+   "file": "counters/20261102-164756-016.jpg",
    "kind": "counter",
    "source": "LOG",
-   "caption": "opponent card at drop: 20261102-015422-015.jpg"
+   "caption": "opponent card at drop: 20261102-164756-016.jpg"
   },
   {
-   "file": "counters/20261102-015422-016.jpg",
+   "file": "counters/20261102-164756-017.jpg",
    "kind": "counter",
    "source": "LOG",
-   "caption": "opponent card at drop: 20261102-015422-016.jpg"
+   "caption": "opponent card at drop: 20261102-164756-017.jpg"
   },
   {
-   "file": "counters/20261102-015422-017.jpg",
+   "file": "counters/20261102-164756-018.jpg",
    "kind": "counter",
    "source": "LOG",
-   "caption": "opponent card at drop: 20261102-015422-017.jpg"
+   "caption": "opponent card at drop: 20261102-164756-018.jpg"
   }
  ],
  "note": "offline evidence only; live recording paused"

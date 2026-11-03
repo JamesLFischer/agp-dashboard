@@ -1,13 +1,13 @@
 {
  "schema": "agp-dashboard/1",
- "exported": "2026-11-02T17:07:18-0800",
+ "exported": "2026-11-02T18:51:21-0800",
  "live_paused": false,
  "idle": {
   "pattern": "run_strat_20261102-*.log",
-  "wall_s": 39600,
+  "wall_s": 44105,
   "battle_s": 24527,
-  "idle_s": 15073,
-  "idle_pct": 38.1,
+  "idle_s": 19578,
+  "idle_pct": 44.4,
   "target_pct": 5,
   "gaps_over_60s": [
    [
@@ -265,9 +265,197 @@
    [
     "14:40:19",
     127
+   ],
+   [
+    "17:11:03",
+    310
+   ],
+   [
+    "17:16:34",
+    93
+   ],
+   [
+    "17:18:34",
+    92
+   ],
+   [
+    "17:20:34",
+    91
+   ],
+   [
+    "17:22:34",
+    90
+   ],
+   [
+    "17:24:35",
+    92
+   ],
+   [
+    "17:26:35",
+    94
+   ],
+   [
+    "17:28:35",
+    90
+   ],
+   [
+    "17:30:35",
+    90
+   ],
+   [
+    "17:32:35",
+    89
+   ],
+   [
+    "17:34:35",
+    90
+   ],
+   [
+    "17:36:36",
+    89
+   ],
+   [
+    "17:38:36",
+    89
+   ],
+   [
+    "17:40:36",
+    90
+   ],
+   [
+    "17:42:36",
+    89
+   ],
+   [
+    "17:44:36",
+    90
+   ],
+   [
+    "17:46:36",
+    90
+   ],
+   [
+    "17:48:37",
+    89
+   ],
+   [
+    "17:50:37",
+    89
+   ],
+   [
+    "17:52:37",
+    90
+   ],
+   [
+    "17:54:37",
+    89
+   ],
+   [
+    "17:56:37",
+    90
+   ],
+   [
+    "17:58:37",
+    89
+   ],
+   [
+    "18:00:38",
+    89
+   ],
+   [
+    "18:02:38",
+    88
+   ],
+   [
+    "18:04:38",
+    90
+   ],
+   [
+    "18:06:38",
+    89
+   ],
+   [
+    "18:08:38",
+    89
+   ],
+   [
+    "18:10:39",
+    90
+   ],
+   [
+    "18:12:39",
+    89
+   ],
+   [
+    "18:14:39",
+    89
+   ],
+   [
+    "18:16:39",
+    89
+   ],
+   [
+    "18:18:39",
+    89
+   ],
+   [
+    "18:20:39",
+    90
+   ],
+   [
+    "18:22:40",
+    93
+   ],
+   [
+    "18:24:40",
+    90
+   ],
+   [
+    "18:26:40",
+    89
+   ],
+   [
+    "18:28:40",
+    89
+   ],
+   [
+    "18:30:41",
+    89
+   ],
+   [
+    "18:32:41",
+    88
+   ],
+   [
+    "18:34:41",
+    91
+   ],
+   [
+    "18:36:41",
+    91
+   ],
+   [
+    "18:38:41",
+    90
+   ],
+   [
+    "18:40:42",
+    89
+   ],
+   [
+    "18:42:42",
+    89
+   ],
+   [
+    "18:44:42",
+    108
+   ],
+   [
+    "18:49:03",
+    134
    ]
   ],
-  "ts": "2026-11-02T17:07:18"
+  "ts": "2026-11-02T18:51:19"
  },
  "labels": {
   "LIVE": "real ladder matches",
@@ -315,8 +503,8 @@
   "notes": "WR 83-112 chat tally; strict counter success + decision_match defined/baselined in cycle 1"
  },
  "latest": {
-  "cycle": 27,
-  "ts": "2026-11-02T17:07:13-08:00",
+  "cycle": 28,
+  "ts": "2026-11-02T18:51:01-08:00",
   "mode": "offline",
   "change": "agp_loop pass (live)",
   "git": null,
@@ -1729,6 +1917,57 @@
   {
    "cycle": 27,
    "ts": "2026-11-02T17:07:13-08:00",
+   "mode": "offline",
+   "change": "agp_loop pass (live)",
+   "git": null,
+   "decision": "REVERT",
+   "kpi": {
+    "win_rate": null,
+    "win_rate_n": 0,
+    "win_rate_sim": null,
+    "win_rate_sim_n": 0,
+    "wasted_spells_per_match": 0.22,
+    "wasted_spells_per_match_n": 206,
+    "placement_heatmap_sim": 0.572,
+    "placement_heatmap_sim_n": 6220,
+    "deck_meta_alignment": 0.65,
+    "deck_meta_alignment_n": 20,
+    "deck_meta_weighted": 0.96,
+    "spell_hit": 0.602,
+    "spell_hit_n": 93,
+    "elixir_waste_s": 1.95,
+    "elixir_waste_s_n": 60,
+    "threat_coverage": 0.85,
+    "threat_coverage_n": 20,
+    "counter_success_strict": 0.676,
+    "counter_success_strict_n": 4631,
+    "deck_upgrades_day": null,
+    "claim_rate": null,
+    "pro_plays": 6220,
+    "own_matches": 382,
+    "decision_match": 0.541,
+    "decision_match_n": 2959,
+    "bc_within1": 0.496,
+    "tests_pass": "65/65"
+   },
+   "source": {
+    "spell_hit": "SIM",
+    "elixir_waste_s": "SIM",
+    "threat_coverage": "LOG+VOD",
+    "counter_success_strict": "LOG",
+    "pro_plays": "VOD",
+    "own_matches": "LOG",
+    "decision_match": "SIM",
+    "tests_pass": "SIM",
+    "wasted_spells_per_match": "SIM",
+    "placement_heatmap_sim": "SIM+VOD",
+    "deck_meta_alignment": "LOG+WEB"
+   },
+   "notes": "target deck_meta not improved 0.65->0.65"
+  },
+  {
+   "cycle": 28,
+   "ts": "2026-11-02T18:51:01-08:00",
    "mode": "offline",
    "change": "agp_loop pass (live)",
    "git": null,
